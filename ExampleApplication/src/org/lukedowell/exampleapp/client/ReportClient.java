@@ -45,7 +45,7 @@ public class ReportClient {
 			Network.register(client.getKryo());
 			client.start();
 			client.connect(ReportClient.CONNECTION_TIMEOUT, "localhost", Network.PORT, Network.PORT);
-			client.addListener(new Listener() { //not really the best way to do it, but it works for this small case
+			client.addListener(new Listener() { 
 				@Override
 				public void received(Connection con, Object o) {
 					if(o instanceof ReportResponse) {
